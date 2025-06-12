@@ -1,6 +1,10 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+// 👇 Agrega esto
+const remoteMain = require('@electron/remote/main');
+remoteMain.initialize();
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1000,
@@ -8,12 +12,15 @@ function createWindow() {
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
+      enableRemoteModule: true, // 👈 Necesario
     },
   });
 
-  win.loadURL('http://localhost:3000'); // Conectará a React en modo dev
+  // 👇 Habilita el remote para esta ventana
+  remoteMain.enable(win.webContents);
 
-  // win.webContents.openDevTools(); // Quita el comentario si quieres ver herramientas de desarrollo
+  win.loadURL('http://localhost:3000');
+  // win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {

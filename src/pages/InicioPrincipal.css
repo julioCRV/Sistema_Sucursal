@@ -1,0 +1,106 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c2c2c;
+    color: #fff;
+  }
+  
+  .login-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #D4AF37; /* dorado */
+  }
+  
+  .login-button-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .login-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #6A0DAD; /* violeta oscuro */
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .login-button.salir {
+    background-color: #8B0000;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .modal-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .modal-button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #6A0DAD;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .modal-button.cancelar {
+    background-color: #8B0000;
+  }
+  
+  .login-message {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+
+  }
+  
+  .login-message.success {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .login-message.error {
+    background-color: #f44336;
+    color: white;
+  }
+  

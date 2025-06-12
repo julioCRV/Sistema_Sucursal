@@ -1,6 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+
+import Login from "./pages/InicioPrincipal";
+
+//  M   E   N   U
 import Inicio from "./pages/Menu/Inicio";
 import Ventas from "./pages/Menu/Ventas";
 import Compras from "./pages/Menu/Compras";
@@ -10,9 +14,9 @@ import Reportes from "./pages/Menu/Reportes";
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Inicio />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/menu" element={<Inicio />} />
         <Route path="/ventas" element={<Ventas />} />
         <Route path="/compras" element={<Compras />} />
         <Route path="/inventario" element={<Inventario />} />
